@@ -105,7 +105,10 @@ class bmr extends Component {
     let resultPAL;
     if (this.state.activity) {
       resultPAL = (
+        <div>
+        <p>Recommended Daily Calories</p>
         <h2 className="resultPAL"><strong>{this.state.bmr * this.state.activity}</strong></h2>
+        </div>
       );
     }
     this.setState({ pal: resultPAL });
@@ -190,6 +193,7 @@ class bmr extends Component {
               name="weight"
               min="0"
               max="999"
+              placeholder="pounds"
             />
           </div>
           <hr/>
@@ -203,6 +207,7 @@ class bmr extends Component {
               className="heightFeet m-2"
               min="0"
               max="8"
+              placeholder="feet"
             />
             <input
               type="text"
@@ -212,6 +217,7 @@ class bmr extends Component {
               className="heightInches m-2"
               min="0"
               max="11"
+              placeholder="inches"
             />
           </div>
           <hr/>
@@ -225,6 +231,7 @@ class bmr extends Component {
               name="age"
               min="0"
               max="120"
+              placeholder="years"
             />
           </div>
           <hr/>
@@ -262,7 +269,8 @@ class bmr extends Component {
                 </option>
               </select>
             </div>
-            <button className="btn btn-orange m-2" type="button" onClick={() => this.calculateKCalories()}>
+            <hr/>
+            <button className="btn btn-orange m-2" type="button" onClick={() => this.calculateKCalories().toFixed(1)}>
               Calculate Calories
             </button>
             {resultPAL}

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import { Context } from "../js/store/appContext";
+import { Context } from "../js/store/appContext";
 
 import { Home } from "../js/pages/Home";
 import { ResultsPage } from "./pages/ResultsPage";
+import { SingleRecipeResultsPage } from "./pages/SingleRecipeResultsPage";
 
 import { PopularPage } from "../js/pages/PopularPage";
 import { SingleRecipePopularPage } from "./pages/SingleRecipePopularPage";
@@ -36,8 +37,8 @@ const Layout = () => {
   //the basename is used when your project is published in a subdirectory and not in the root of the domain
   // you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
   const basename = process.env.BASENAME || "";
-  // const [store, actions] = useState(["hello"]);
-  // const value = {store, actions};
+  const [store, actions] = useState([""]);
+  const value = {store, actions};
 
   //State for Search
   const [query, setQuery] = useState("");
@@ -106,6 +107,10 @@ const Layout = () => {
           <Route
             element={<ResultsPage query={query} setQuery={setQuery} />}
             path="/ResultsPage"
+          />
+          <Route
+            element={<SingleRecipeResultsPage />}
+            path="/SingleRecipeResults/:theid"
           />
 
           <Route element={<h1>404 Not Found!</h1>} />

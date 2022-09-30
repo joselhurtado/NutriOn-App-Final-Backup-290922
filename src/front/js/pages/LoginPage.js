@@ -11,13 +11,13 @@ export const Login = () => {
 					<p className="text-light text-center m-2">Let’s start your healthy journey.</p>
 					
 				<div className="container introBTN">
-					<label for="formGroupExampleInput" className="form-label text-light">Email Adrress</label>
+					<label className="form-label text-light" for="formGroupExampleInput">Email Adrress</label>
 					<input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
 					</div>
 					<div className="container mt-2">
-					<label for="formGroupExampleInput" className="form-label text-light">Password</label>
+					<label className="form-label text-light" for="formGroupExampleInput">Password</label>
 					<input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
-					<small id="passwordHelpBlock" classname="form-text text-muted">
+					<small id="passwordHelpBlock" className="form-text text-muted">
   					<p className="text-light">Your password must be 8-20 characters long.</p>
 					</small>
 				

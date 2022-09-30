@@ -46,13 +46,14 @@ const BMICalculator = () => {
       <button className="container btn btn-orange mb-2 mt-2" onClick={handleBmi}>
         Calculate BMI
       </button>
+
+      <div className="align-middle BMIresult">
       <h2>
         <strong>Your BMI is:</strong>
-      </h2>
-      <div className="align-middle BMIresult">{bmi}</div>
+      </h2>{bmi}</div>
       <div>
-        <strong>Your Range info:</strong>
-        <div className="alert">{info}</div>
+        
+        <div className="alert"><strong>Your Range info:</strong>{info}</div>
       </div>
     </div>
   );

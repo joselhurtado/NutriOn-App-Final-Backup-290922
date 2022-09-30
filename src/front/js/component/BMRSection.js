@@ -10,9 +10,7 @@ export const BMRSection = () => {
             <div className="card-body">
               <div className="row">
                 <h1 className="card-title">BMR and Daily Calorie Counter</h1>
-                <div className="col">
-                  <BMRCalculator />
-                </div>
+                 <BMRCalculator />
               </div>
             </div>
           </div>
