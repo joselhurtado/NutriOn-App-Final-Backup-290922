@@ -33,7 +33,7 @@ export default function RecipeDetailsPopular() {
               <h5 className="card-title text-light singleRecipeTitle">{recipe?.title}</h5>
               <hr />
               <div className="d-flex mt-4 justify-content-between">
-                <Link to={`/ResultsPage`} className="btn btn-orange">
+                <Link to={`/PopularPage`} className="btn btn-orange">
                 Go Back
                 </Link>
               </div>

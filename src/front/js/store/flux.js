@@ -16,7 +16,7 @@ const getState = ({ getStore, getActions, setStore }) => {
     actions: {
       getPopularRecipes: async () => {
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/findByNutrients?apiKey=${process.env.APIfood}&minCarbs=10&maxCarbs=1000&number=3`
+          `https://api.spoonacular.com/recipes/findByNutrients?apiKey=${process.env.APIfood}&minCarbs=10&maxCarbs=1000&number=12`
         );
         const payload = await response.json();
         setStore({ recipePopular: payload });
@@ -25,7 +25,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       getInstructionsRecipes: async () => {
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/random?apiKey=${process.env.APIfood}&number=3`
+          `https://api.spoonacular.com/recipes/random?apiKey=${process.env.APIfood}&number=12`
         );
         const payload = await response.json();
         setStore({ recipeInstructions: payload.recipes });
@@ -34,7 +34,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       getResultsRecipes: async (text) => {
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?query=${text}&apiKey=${process.env.APIfood}&number=3`
+          `https://api.spoonacular.com/recipes/complexSearch?query=${text}&apiKey=${process.env.APIfood}&number=12`
         );
         const payload = await response.json();
         setStore({ recipeResults: payload.results });
@@ -43,7 +43,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       getVeganRecipes: async () => {
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?query=vegan&apiKey=${process.env.APIfood}&number=3`
+          `https://api.spoonacular.com/recipes/complexSearch?query=vegan&apiKey=${process.env.APIfood}&number=12`
         );
         const payload = await response.json();
         setStore({ recipeVegan: payload.results });
@@ -52,7 +52,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       getKetoRecipes: async () => {
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?query=keto&apiKey=${process.env.APIfood}&number=3`
+          `https://api.spoonacular.com/recipes/complexSearch?query=keto&apiKey=${process.env.APIfood}&number=12`
         );
         const payload = await response.json();
         setStore({ recipeKeto: payload.results });
@@ -61,7 +61,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       getPaleoRecipes: async () => {
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?query=paleo&apiKey=${process.env.APIfood}&number=3`
+          `https://api.spoonacular.com/recipes/complexSearch?query=paleo&apiKey=${process.env.APIfood}&number=12`
         );
         const payload = await response.json();
         setStore({ recipePaleo: payload.results });
@@ -70,7 +70,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       getVegetarianRecipes: async () => {
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?query=vegetarian&apiKey=${process.env.APIfood}&number=`
+          `https://api.spoonacular.com/recipes/complexSearch?query=vegetarian&apiKey=${process.env.APIfood}&number=12`
         );
         const payload = await response.json();
         setStore({ recipeVegetarian: payload.results });
