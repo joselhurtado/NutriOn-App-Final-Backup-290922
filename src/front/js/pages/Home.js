@@ -17,7 +17,7 @@ export const Home = () => {
 			<section className="container">
 				<BMISection />
 			</section>
-			<section className="container">
+			<section id="RecipeSection" className="container">
 				<RecipeCollection />
 			</section>
 		</div>

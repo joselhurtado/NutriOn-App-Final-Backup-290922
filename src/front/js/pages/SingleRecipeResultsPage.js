@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/home.css";
 import  RecipeDetailsResults from "/src/front/js/component/RecipeDetailsResults";
 import RecipeCollection from "/src/front/js/component/RecipeCollection.js";
+import { Link } from "react-router-dom";
 
 export const SingleRecipeResultsPage = () => {
 	return (
