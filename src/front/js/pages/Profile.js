@@ -40,46 +40,33 @@ export default function Profile({
             </div>
           </div>
           <div className="col-sm">
-            <h1 className="card-title text-center mt-1">My Information</h1>
+            <h1 className="card-title text-left mt-1">My Information</h1>
             <div>
               <label
                 for="exampleFormControlInput1"
-                className="form-label fullName"
+                className="form-label fullName text-dark text-left"
               >
-                {userdata.firstname + " " + userdata.lastname}
+                First LastName{userdata.firstName + " " + userdata.lastName}
               </label>
-              <input
-                type="text"
-                className="form-control fullName"
-                id="exampleFormControlInput1"
-                placeholder={userdata.firstName + " " + userdata.lastName}
-              />
-            </div>
-            <div className="mb-3">
-              <label
-                for="exampleFormControlInput2"
-                className="form-label usernameInput"
-              ></label>
-              <input
-                type="text"
-                className="form-control usernameInput"
-                id="exampleFormControlInput2"
-                placeholder={userdata.userName}
-              />
-            </div>
-            <div className="mb-3">
-              <label
-                for="exampleFormControlInput3"
-                className="form-label emailAddressInput"
-              >
-                {Email}
-              </label>
-              <input
-                type="email"
-                className="form-control emailAddressInput"
-                id="exampleFormControlInput3"
-                placeholder={userdata.emailsignup}
-              />
+              <hr/>
+              <h1 className="card-title text-left">Account Information</h1>
+              <ul className="list-group list-group-flush text-left">
+                    <li className="card-text list-group-item"><strong>First Name:</strong> <em>{userdata.firstName}</em></li>
+                    <li className="card-text list-group-item"><strong>Last Name:</strong> <em>{userdata.lastName}</em></li>
+                    <li className="card-text list-group-item"><strong>Username:</strong> <em>{userdata.userName}</em></li>
+                    <li className="card-text list-group-item"><strong>Email:</strong> <em>{userdata.emailsignup}</em></li>
+                  </ul>
+                  <hr/>
+              <h1 className="card-title text-left">My Weight Gain Journey</h1>
+              <ul className="list-group list-group-flush text-left">
+                    <li className="card-text list-group-item"><strong>Age:</strong> <em>{userdatatwo.age}</em></li>
+                    <li className="card-text list-group-item"><strong>Weight:</strong> <em>{userdatatwo.weight}</em></li>
+                    <li className="card-text list-group-item"><strong>Height:</strong>
+                    <em>{userdatatwo.feet} - {userdatatwo.inches}</em></li>
+                    <li className="card-text list-group-item"><strong>Type of Diet:</strong> <em>{userdatatwo.diet}</em></li>
+                    <li className="card-text list-group-item"><strong>Nutrition Goal:</strong> <em>{userdata.weightgoal}</em></li>
+                  </ul>
+                  <hr/>
             </div>
           </div>
         </div>
