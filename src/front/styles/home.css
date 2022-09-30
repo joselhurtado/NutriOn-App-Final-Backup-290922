@@ -175,12 +175,10 @@ body {
 .BMRSection {
   font-family: "Poppins", sans-serif;
   background-color: #d14532;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 100vw;
-  min-height: 466px;
+  min-height: 366px;
   position: relative;
   left: 50%;
   right: 50%;

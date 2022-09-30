@@ -3,6 +3,8 @@ import "../../styles/home.css";
 import  RecipeDetailsPopular from "/src/front/js/component/RecipeDetailsPopular";
 import { BMRSection } from "/src/front/js/component/BMRSection";
 import { HeroSearch } from "/src/front/js/component/HeroSearch";
+import RecipeCollection from "/src/front/js/component/RecipeCollection.js";
+
 
 export const SingleRecipePopularPage = () => {
 	return (
@@ -16,6 +18,9 @@ export const SingleRecipePopularPage = () => {
 			<div>
 				<BMRSection />
 			</div>
+			<section className="container">
+				<RecipeCollection />
+			</section>
 		</div>
 )
 }

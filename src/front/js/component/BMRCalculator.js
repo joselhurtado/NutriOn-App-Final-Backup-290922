@@ -138,11 +138,11 @@ class bmr extends Component {
     return (
       <div className="container">
           {error}
-          <div className="container m-2">
+          <div className="container m-1">
             <label className="m-2"><strong>Gender</strong></label>
 
             <label className="m-2">
-              <input className="radioInput m-2" 
+              <input className="radioInput m-1" 
                 type="radio"
                 checked={this.state.gender == "1"}
                 onChange={this.handlegenderChange}
@@ -152,8 +152,8 @@ class bmr extends Component {
               Female
             </label>
             
-            <label className="m-2">
-              <input className="radioInput m-2"
+            <label className="m-1">
+              <input className="radioInput m-1"
                 type="radio"
                 checked={this.state.gender == "2"}
                 onChange={this.handlegenderChange}
@@ -164,10 +164,10 @@ class bmr extends Component {
             </label>
           </div>
           <hr/>
-          <div className="container m-2">
+          <div className="container m-1">
             <label className="m-2"><strong>Weight</strong></label>
             <label>
-              <input className="radioInput m-2"
+              <input className="radioInput m-1"
                 type="radio"
                 checked={this.state.weightType == "1"}
                 onChange={this.handleweightTypeChange}
@@ -176,8 +176,8 @@ class bmr extends Component {
               />
               Imperial (in lbs)
             </label>
-            <label className="m-2">
-              <input className="radioInput m-2"
+            <label className="m-1">
+              <input className="radioInput m-1"
                 type="radio"
                 checked={this.state.weightType == "2"}
                 onChange={this.handleweightTypeChange}
@@ -186,7 +186,7 @@ class bmr extends Component {
               />
               Metric (in KG)
             </label>
-            <input className="m-2"
+            <input className="m-1"
               type="text"
               value={this.state.weight}
               onChange={this.handleWeightChange}
@@ -197,14 +197,14 @@ class bmr extends Component {
             />
           </div>
           <hr/>
-          <div className="m-2">
-            <label className="label -m2"><strong>Height in feet and inches</strong></label>
+          <div className="m-1">
+            <label className="label -m1"><strong>Height in feet and inches</strong></label>
             <input 
               type="text"
               value={this.state.heightFeet}
               onChange={this.handleheightFeetChange}
               name="heightFeet"
-              className="heightFeet m-2"
+              className="heightFeet m-1"
               min="0"
               max="8"
               placeholder="feet"
@@ -214,15 +214,15 @@ class bmr extends Component {
               value={this.state.heightInches}
               onChange={this.handleheightInchesChange}
               name="heightInches"
-              className="heightInches m-2"
+              className="heightInches m-1"
               min="0"
               max="11"
               placeholder="inches"
             />
           </div>
           <hr/>
-          <div className="inputwrap m-2">
-            <label className="label m-2"><strong>Age in years</strong></label>
+          <div className="inputwrap m-1">
+            <label className="label m-1"><strong>Age in years</strong></label>
             <input
               type="text"
               value={this.state.age}
@@ -235,15 +235,15 @@ class bmr extends Component {
             />
           </div>
           <hr/>
-          <button className="btn btn-orange m-2" type="button" onClick={() => this.calculateBMR()}>
+          <button className="btn btn-orange m-1" type="button" onClick={() => this.calculateBMR()}>
             Calculate BMR
           </button>
           {resultBMR}
           {resultSug}
           <hr/>
-          <div className="container m-2">
-            <div className="inputwrap m-2">
-              <label className="label m-2"><strong>Workout in a Week</strong></label>
+          <div className="container m-1">
+            <div className="inputwrap m-1">
+              <label className="label m-1"><strong>Workout in a Week</strong></label>
               <select
                 className="activity"
                 value={this.state.activity}
@@ -270,7 +270,7 @@ class bmr extends Component {
               </select>
             </div>
             <hr/>
-            <button className="btn btn-orange m-2" type="button" onClick={() => this.calculateKCalories().toFixed(1)}>
+            <button className="btn btn-orange m-1" type="button" onClick={() => this.calculateKCalories().toFixed(1)}>
               Calculate Calories
             </button>
             {resultPAL}
