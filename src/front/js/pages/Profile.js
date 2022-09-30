@@ -35,7 +35,7 @@ export default function Profile({
               alt="..."
             />
             <div className="card-body text-cente">
-              <h1 className="card-text text-center">{userdata.firstName} MELISSA</h1>
+              <h1 className="card-text text-center">{userdata.firstName}</h1>
               <h4 className="text-center ">Weight Goals:
                 <br/>
                 {userdata.weightgoal} Lose Weight
@@ -50,7 +50,7 @@ export default function Profile({
                     <li className="card-text list-group-item"><strong>Genre:</strong> <em>{userdata.sex}</em></li>
                     <li className="card-text list-group-item"><strong>Username:</strong> <em>{userdata.userName}</em></li>
                     <li className="card-text list-group-item"><strong>Email:</strong> <em>{userdata.emailsignup}</em></li>
-                    <li className="card-text list-group-item"><strong>Email:</strong> <em>{userdata.passWord}</em></li>
+                    <li className="card-text list-group-item"><strong>Password</strong> <em>******</em></li>
                   </ul>
                   <hr/>
               <h1 className="card-title text-left">Nutrition Journey</h1>
